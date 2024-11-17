@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+    <option name="myAllFileTypesSelected" value="false" />
+    <option name="mySelectedFileTypes">
+      <set>
+        <option value="Python" />
+      </set>
+    </option>
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+    <option name="myAllFileTypesSelected" value="false" />
+    <option name="mySelectedFileTypes">
+      <set>
+        <option value="Python" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (.venv)" project-jdk-type="Python SDK" />
+</project>
