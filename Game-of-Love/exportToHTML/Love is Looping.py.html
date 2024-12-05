@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>Love is Looping.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d55fde; font-style: italic;}
+.s1 { color: #bbbbbb;}
+.s2 { color: #89ca78;}
+.s3 { color: #2bbac5;}
+.s4 { color: #d19a66;}
+.s5 { color: #5c6370; font-style: italic;}
+.ls0 { height: 1px; border-width: 0; color: #3b4048; background-color:#3b4048}
+.ln { color: #495162; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#282c34">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Love is Looping.py</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">import </span><span class="s1">random</span>
+<a name="l2"><span class="ln">2    </span></a>
+<a name="l3"><span class="ln">3    </span></a>
+<a name="l4"><span class="ln">4    </span></a><span class="s0">class </span><span class="s1">Profile:</span>
+<a name="l5"><span class="ln">5    </span></a>    <span class="s0">def </span><span class="s1">__init__ (self, name, age, location, kids, want_kids, relationship_type, max_distance):</span>
+<a name="l6"><span class="ln">6    </span></a>        <span class="s1">self.name = name</span>
+<a name="l7"><span class="ln">7    </span></a>        <span class="s1">self.age = age</span>
+<a name="l8"><span class="ln">8    </span></a>        <span class="s1">self.location = location</span>
+<a name="l9"><span class="ln">9    </span></a>        <span class="s1">self.kids = kids</span>
+<a name="l10"><span class="ln">10   </span></a>        <span class="s1">self.want_kids = want_kids</span>
+<a name="l11"><span class="ln">11   </span></a>        <span class="s1">self.relationship_type = relationship_type</span>
+<a name="l12"><span class="ln">12   </span></a>        <span class="s1">self.max_distance = max_distance</span>
+<a name="l13"><span class="ln">13   </span></a><hr class="ls0"><a name="l14"><span class="ln">14   </span></a>    <span class="s1">@classmethod</span>
+<a name="l15"><span class="ln">15   </span></a>    <span class="s0">def </span><span class="s1">create_profile (cls):</span>
+<a name="l16"><span class="ln">16   </span></a>        <span class="s1">name = input (</span><span class="s2">&quot;Enter your name: &quot;</span><span class="s1">)</span>
+<a name="l17"><span class="ln">17   </span></a>        <span class="s1">age = input (</span><span class="s2">&quot;Enter your age: &quot;</span><span class="s1">)</span>
+<a name="l18"><span class="ln">18   </span></a>        <span class="s1">location = input (</span><span class="s2">&quot;Enter your location: &quot;</span><span class="s1">)</span>
+<a name="l19"><span class="ln">19   </span></a>        <span class="s1">kids = input (</span><span class="s2">&quot;Do you have kids? (yes/no): &quot;</span><span class="s1">)</span>
+<a name="l20"><span class="ln">20   </span></a>        <span class="s1">want_kids = input (</span><span class="s2">&quot;Do you want kids? (yes/no): &quot;</span><span class="s1">)</span>
+<a name="l21"><span class="ln">21   </span></a>        <span class="s1">relationship_type = input (</span><span class="s2">&quot;Are you looking for love or something casual? &quot;</span><span class="s1">)</span>
+<a name="l22"><span class="ln">22   </span></a>        <span class="s1">max_distance = input (</span><span class="s2">&quot;What's the maximum distance you're willing to date (in miles)? &quot;</span><span class="s1">)</span>
+<a name="l23"><span class="ln">23   </span></a>        <span class="s0">return </span><span class="s1">cls (name, age, location, kids, want_kids, relationship_type, max_distance)</span>
+<a name="l24"><span class="ln">24   </span></a><hr class="ls0"><a name="l25"><span class="ln">25   </span></a>    <span class="s0">def </span><span class="s1">display_profile (self):</span>
+<a name="l26"><span class="ln">26   </span></a>        <span class="s1">print (</span><span class="s2">&quot;</span><span class="s3">\n</span><span class="s2">Your Profile:&quot;</span><span class="s1">)</span>
+<a name="l27"><span class="ln">27   </span></a>        <span class="s1">print (</span><span class="s2">f&quot;Name: </span><span class="s3">{</span><span class="s1">self.name</span><span class="s3">}</span><span class="s2">&quot;</span><span class="s1">)</span>
+<a name="l28"><span class="ln">28   </span></a>        <span class="s1">print (</span><span class="s2">f&quot;Age: </span><span class="s3">{</span><span class="s1">self.age</span><span class="s3">}</span><span class="s2">&quot;</span><span class="s1">)</span>
+<a name="l29"><span class="ln">29   </span></a>        <span class="s1">print (</span><span class="s2">f&quot;Location: </span><span class="s3">{</span><span class="s1">self.location</span><span class="s3">}</span><span class="s2">&quot;</span><span class="s1">)</span>
+<a name="l30"><span class="ln">30   </span></a>        <span class="s1">print (</span><span class="s2">f&quot;Kids: </span><span class="s3">{</span><span class="s1">self.kids</span><span class="s3">}</span><span class="s2">&quot;</span><span class="s1">)</span>
+<a name="l31"><span class="ln">31   </span></a>        <span class="s1">print (</span><span class="s2">f&quot;Want Kids: </span><span class="s3">{</span><span class="s1">self.want_kids</span><span class="s3">}</span><span class="s2">&quot;</span><span class="s1">)</span>
+<a name="l32"><span class="ln">32   </span></a>        <span class="s1">print (</span><span class="s2">f&quot;Relationship Type: </span><span class="s3">{</span><span class="s1">self.relationship_type</span><span class="s3">}</span><span class="s2">&quot;</span><span class="s1">)</span>
+<a name="l33"><span class="ln">33   </span></a>        <span class="s1">print (</span><span class="s2">f&quot;Max Distance: </span><span class="s3">{</span><span class="s1">self.max_distance</span><span class="s3">} </span><span class="s2">miles&quot;</span><span class="s1">)</span>
+<a name="l34"><span class="ln">34   </span></a>
+<a name="l35"><span class="ln">35   </span></a><hr class="ls0"><a name="l36"><span class="ln">36   </span></a><span class="s0">class </span><span class="s1">Message:</span>
+<a name="l37"><span class="ln">37   </span></a>    <span class="s0">def </span><span class="s1">__init__ (self, content):</span>
+<a name="l38"><span class="ln">38   </span></a>        <span class="s1">self.content = content</span>
+<a name="l39"><span class="ln">39   </span></a><hr class="ls0"><a name="l40"><span class="ln">40   </span></a>    <span class="s0">def </span><span class="s1">display_message (self, index):</span>
+<a name="l41"><span class="ln">41   </span></a>        <span class="s1">print (</span><span class="s2">f&quot;</span><span class="s3">\n</span><span class="s2">Message </span><span class="s3">{</span><span class="s1">index + </span><span class="s4">1</span><span class="s3">}</span><span class="s2">: </span><span class="s3">{</span><span class="s1">self.content</span><span class="s3">}</span><span class="s2">&quot;</span><span class="s1">)</span>
+<a name="l42"><span class="ln">42   </span></a>
+<a name="l43"><span class="ln">43   </span></a><hr class="ls0"><a name="l44"><span class="ln">44   </span></a><span class="s0">class </span><span class="s1">DatingApp:</span>
+<a name="l45"><span class="ln">45   </span></a>    <span class="s0">def </span><span class="s1">__init__ (self):</span>
+<a name="l46"><span class="ln">46   </span></a>        <span class="s1">self.profile = </span><span class="s0">None</span>
+<a name="l47"><span class="ln">47   </span></a>        <span class="s1">self.messages = self.generate_messages ()</span>
+<a name="l48"><span class="ln">48   </span></a>        <span class="s1">self.correct_response = </span><span class="s2">&quot;I love reading books!&quot;</span>
+<a name="l49"><span class="ln">49   </span></a>        <span class="s1">self.girlfriends = [Girlfriend (name) </span><span class="s0">for </span><span class="s1">name </span><span class="s0">in </span><span class="s1">[</span><span class="s2">&quot;Alice&quot;</span><span class="s1">, </span><span class="s2">&quot;Bella&quot;</span><span class="s1">, </span><span class="s2">&quot;Catherine&quot;</span><span class="s1">, </span><span class="s2">&quot;Diana&quot;</span><span class="s1">, </span><span class="s2">&quot;Eva&quot;</span><span class="s1">, </span><span class="s2">&quot;Fiona&quot;</span><span class="s1">, </span><span class="s2">&quot;Grace&quot;</span><span class="s1">, </span><span class="s2">&quot;Hannah&quot;</span><span class="s1">, </span><span class="s2">&quot;Isla&quot;</span><span class="s1">, </span><span class="s2">&quot;Julia&quot;</span><span class="s1">]]</span>
+<a name="l50"><span class="ln">50   </span></a>        <span class="s1">self.current_girlfriend = </span><span class="s0">None</span>
+<a name="l51"><span class="ln">51   </span></a>
+<a name="l52"><span class="ln">52   </span></a><hr class="ls0"><a name="l53"><span class="ln">53   </span></a><span class="s0">class </span><span class="s1">Girlfriend:</span>
+<a name="l54"><span class="ln">54   </span></a>    <span class="s0">def </span><span class="s1">__init__ (self, name, attributes, likes, dislikes):</span>
+<a name="l55"><span class="ln">55   </span></a>        <span class="s1">self.name = name</span>
+<a name="l56"><span class="ln">56   </span></a>        <span class="s1">self.attributes = attributes</span>
+<a name="l57"><span class="ln">57   </span></a>        <span class="s1">self.likes = likes</span>
+<a name="l58"><span class="ln">58   </span></a>        <span class="s1">self.dislikes = dislikes</span>
+<a name="l59"><span class="ln">59   </span></a>        <span class="s1">self.distancing_level = </span><span class="s4">0</span>
+<a name="l60"><span class="ln">60   </span></a><hr class="ls0"><a name="l61"><span class="ln">61   </span></a>    <span class="s0">def </span><span class="s1">distance (self):</span>
+<a name="l62"><span class="ln">62   </span></a>        <span class="s1">self.distancing_level += </span><span class="s4">1</span>
+<a name="l63"><span class="ln">63   </span></a><hr class="ls0"><a name="l64"><span class="ln">64   </span></a>    <span class="s0">def </span><span class="s1">is_ghosting (self):</span>
+<a name="l65"><span class="ln">65   </span></a>        <span class="s0">return </span><span class="s1">self.distancing_level &gt;= </span><span class="s4">3</span>
+<a name="l66"><span class="ln">66   </span></a>
+<a name="l67"><span class="ln">67   </span></a><hr class="ls0"><a name="l68"><span class="ln">68   </span></a><span class="s0">class </span><span class="s1">DatingApp:</span>
+<a name="l69"><span class="ln">69   </span></a>    <span class="s0">def </span><span class="s1">__init__ (self):</span>
+<a name="l70"><span class="ln">70   </span></a>        <span class="s1">self.profile = </span><span class="s0">None</span>
+<a name="l71"><span class="ln">71   </span></a>        <span class="s1">self.messages = self.generate_messages ()</span>
+<a name="l72"><span class="ln">72   </span></a>        <span class="s1">self.correct_response = </span><span class="s2">&quot;I love reading books!&quot;</span>
+<a name="l73"><span class="ln">73   </span></a>        <span class="s1">self.girlfriends = self.generate_girlfriends ()</span>
+<a name="l74"><span class="ln">74   </span></a>        <span class="s1">self.current_girlfriend = </span><span class="s0">None</span>
+<a name="l75"><span class="ln">75   </span></a><hr class="ls0"><a name="l76"><span class="ln">76   </span></a>    <span class="s0">def </span><span class="s1">generate_messages (self):</span>
+<a name="l77"><span class="ln">77   </span></a>        <span class="s1">messages_content = [</span>
+<a name="l78"><span class="ln">78   </span></a>            <span class="s2">&quot;Hi! How are you?&quot;</span><span class="s1">,</span>
+<a name="l79"><span class="ln">79   </span></a>            <span class="s2">&quot;What's your favorite hobby?&quot;</span><span class="s1">,</span>
+<a name="l80"><span class="ln">80   </span></a>            <span class="s2">&quot;Do you like traveling?&quot;</span><span class="s1">,</span>
+<a name="l81"><span class="ln">81   </span></a>            <span class="s2">&quot;What's your favorite movie?&quot;</span><span class="s1">,</span>
+<a name="l82"><span class="ln">82   </span></a>            <span class="s2">&quot;Do you have any pets?&quot;</span><span class="s1">,</span>
+<a name="l83"><span class="ln">83   </span></a>            <span class="s2">&quot;What's your dream job?&quot;</span><span class="s1">,</span>
+<a name="l84"><span class="ln">84   </span></a>            <span class="s2">&quot;Do you like cooking?&quot;</span><span class="s1">,</span>
+<a name="l85"><span class="ln">85   </span></a>            <span class="s2">&quot;What's your favorite book?&quot;</span><span class="s1">,</span>
+<a name="l86"><span class="ln">86   </span></a>            <span class="s2">&quot;Do you play any sports?&quot;</span><span class="s1">,</span>
+<a name="l87"><span class="ln">87   </span></a>            <span class="s2">&quot;What's your favorite music genre?&quot;</span>
+<a name="l88"><span class="ln">88   </span></a>        <span class="s1">]</span>
+<a name="l89"><span class="ln">89   </span></a>        <span class="s0">return </span><span class="s1">[Message (content) </span><span class="s0">for </span><span class="s1">content </span><span class="s0">in </span><span class="s1">messages_content]</span>
+<a name="l90"><span class="ln">90   </span></a><hr class="ls0"><a name="l91"><span class="ln">91   </span></a>    <span class="s0">def </span><span class="s1">generate_girlfriends (self):</span>
+<a name="l92"><span class="ln">92   </span></a>        <span class="s1">names = [</span><span class="s2">&quot;Alice&quot;</span><span class="s1">, </span><span class="s2">&quot;Bella&quot;</span><span class="s1">, </span><span class="s2">&quot;Catherine&quot;</span><span class="s1">, </span><span class="s2">&quot;Diana&quot;</span><span class="s1">, </span><span class="s2">&quot;Eva&quot;</span><span class="s1">, </span><span class="s2">&quot;Fiona&quot;</span><span class="s1">, </span><span class="s2">&quot;Grace&quot;</span><span class="s1">, </span><span class="s2">&quot;Hannah&quot;</span><span class="s1">, </span><span class="s2">&quot;Isla&quot;</span><span class="s1">, </span><span class="s2">&quot;Julia&quot;</span><span class="s1">]</span>
+<a name="l93"><span class="ln">93   </span></a>        <span class="s1">attributes = [</span><span class="s2">&quot;kind&quot;</span><span class="s1">, </span><span class="s2">&quot;funny&quot;</span><span class="s1">, </span><span class="s2">&quot;intelligent&quot;</span><span class="s1">, </span><span class="s2">&quot;adventurous&quot;</span><span class="s1">, </span><span class="s2">&quot;creative&quot;</span><span class="s1">]</span>
+<a name="l94"><span class="ln">94   </span></a>        <span class="s1">likes = [</span><span class="s2">&quot;reading&quot;</span><span class="s1">, </span><span class="s2">&quot;traveling&quot;</span><span class="s1">, </span><span class="s2">&quot;cooking&quot;</span><span class="s1">, </span><span class="s2">&quot;sports&quot;</span><span class="s1">, </span><span class="s2">&quot;music&quot;</span><span class="s1">]</span>
+<a name="l95"><span class="ln">95   </span></a>        <span class="s1">dislikes = [</span><span class="s2">&quot;laziness&quot;</span><span class="s1">, </span><span class="s2">&quot;rudeness&quot;</span><span class="s1">, </span><span class="s2">&quot;dishonesty&quot;</span><span class="s1">, </span><span class="s2">&quot;boredom&quot;</span><span class="s1">, </span><span class="s2">&quot;negativity&quot;</span><span class="s1">]</span>
+<a name="l96"><span class="ln">96   </span></a>        <span class="s0">return </span><span class="s1">[Girlfriend (name, random.choice (attributes), random.choice (likes), random.choice (dislikes)) </span><span class="s0">for </span><span class="s1">name </span><span class="s0">in </span><span class="s1">names]</span>
+<a name="l97"><span class="ln">97   </span></a><hr class="ls0"><a name="l98"><span class="ln">98   </span></a>    <span class="s0">def </span><span class="s1">display_welcome_message (self):</span>
+<a name="l99"><span class="ln">99   </span></a>        <span class="s1">print (</span><span class="s2">&quot;Welcome to Ira's Game of Love!&quot;</span><span class="s1">)</span>
+<a name="l100"><span class="ln">100  </span></a>        <span class="s1">print (</span><span class="s2">&quot;Let's build your profile to find the best matches for you.&quot;</span><span class="s1">)</span>
+<a name="l101"><span class="ln">101  </span></a><hr class="ls0"><a name="l102"><span class="ln">102  </span></a>    <span class="s0">def </span><span class="s1">respond_to_messages (self):</span>
+<a name="l103"><span class="ln">103  </span></a>        <span class="s0">for </span><span class="s1">i, message </span><span class="s0">in </span><span class="s1">enumerate (self.messages):</span>
+<a name="l104"><span class="ln">104  </span></a>            <span class="s1">message.display_message (i)</span>
+<a name="l105"><span class="ln">105  </span></a>            <span class="s1">response = input (</span><span class="s2">&quot;Your response: &quot;</span><span class="s1">)</span>
+<a name="l106"><span class="ln">106  </span></a>            <span class="s0">if </span><span class="s1">response == self.correct_response:</span>
+<a name="l107"><span class="ln">107  </span></a>                <span class="s1">print (</span><span class="s2">&quot;Congratulations! You found the right match!&quot;</span><span class="s1">)</span>
+<a name="l108"><span class="ln">108  </span></a>                <span class="s0">return True</span>
+<a name="l109"><span class="ln">109  </span></a>            <span class="s0">else</span><span class="s1">:</span>
+<a name="l110"><span class="ln">110  </span></a>                <span class="s1">self.current_girlfriend.distance ()</span>
+<a name="l111"><span class="ln">111  </span></a>                <span class="s0">if </span><span class="s1">self.current_girlfriend.is_ghosting ():</span>
+<a name="l112"><span class="ln">112  </span></a>                    <span class="s1">print (</span><span class="s2">f&quot;Sorry, </span><span class="s3">{</span><span class="s1">self.current_girlfriend.name</span><span class="s3">} </span><span class="s2">is ghosting you. Starting over...&quot;</span><span class="s1">)</span>
+<a name="l113"><span class="ln">113  </span></a>                    <span class="s0">return False</span>
+<a name="l114"><span class="ln">114  </span></a>        <span class="s0">return False</span>
+<a name="l115"><span class="ln">115  </span></a><hr class="ls0"><a name="l116"><span class="ln">116  </span></a>    <span class="s0">def </span><span class="s1">run (self):</span>
+<a name="l117"><span class="ln">117  </span></a>        <span class="s1">self.display_welcome_message ()</span>
+<a name="l118"><span class="ln">118  </span></a>        <span class="s1">self.profile = Profile.create_profile ()</span>
+<a name="l119"><span class="ln">119  </span></a>        <span class="s1">self.profile.display_profile ()</span>
+<a name="l120"><span class="ln">120  </span></a>
+<a name="l121"><span class="ln">121  </span></a>        <span class="s0">while </span><span class="s1">self.girlfriends:</span>
+<a name="l122"><span class="ln">122  </span></a>            <span class="s1">self.current_girlfriend = random.choice (self.girlfriends)</span>
+<a name="l123"><span class="ln">123  </span></a>            <span class="s1">print (</span><span class="s2">f&quot;</span><span class="s3">\n</span><span class="s2">You are now dating </span><span class="s3">{</span><span class="s1">self.current_girlfriend.name</span><span class="s3">}</span><span class="s2">.&quot;</span><span class="s1">)</span>
+<a name="l124"><span class="ln">124  </span></a>            <span class="s1">print (</span><span class="s2">f&quot;Attributes: </span><span class="s3">{</span><span class="s1">self.current_girlfriend.attributes</span><span class="s3">}</span><span class="s2">&quot;</span><span class="s1">)</span>
+<a name="l125"><span class="ln">125  </span></a>            <span class="s1">print (</span><span class="s2">f&quot;Likes: </span><span class="s3">{</span><span class="s1">self.current_girlfriend.likes</span><span class="s3">}</span><span class="s2">&quot;</span><span class="s1">)</span>
+<a name="l126"><span class="ln">126  </span></a>            <span class="s1">print (</span><span class="s2">f&quot;Dislikes: </span><span class="s3">{</span><span class="s1">self.current_girlfriend.dislikes</span><span class="s3">}</span><span class="s2">&quot;</span><span class="s1">)</span>
+<a name="l127"><span class="ln">127  </span></a>            <span class="s1">success = self.respond_to_messages ()</span>
+<a name="l128"><span class="ln">128  </span></a>            <span class="s0">if </span><span class="s1">success:</span>
+<a name="l129"><span class="ln">129  </span></a>                <span class="s0">break</span>
+<a name="l130"><span class="ln">130  </span></a>            <span class="s0">else</span><span class="s1">:</span>
+<a name="l131"><span class="ln">131  </span></a>                <span class="s1">self.girlfriends.remove (self.current_girlfriend)</span>
+<a name="l132"><span class="ln">132  </span></a>                <span class="s0">if not </span><span class="s1">self.girlfriends:</span>
+<a name="l133"><span class="ln">133  </span></a>                    <span class="s1">print (</span><span class="s2">&quot;No more women to date. Game over.&quot;</span><span class="s1">)</span>
+<a name="l134"><span class="ln">134  </span></a>                    <span class="s0">break</span>
+<a name="l135"><span class="ln">135  </span></a>
+<a name="l136"><span class="ln">136  </span></a>
+<a name="l137"><span class="ln">137  </span></a><span class="s0">if </span><span class="s1">__name__ == </span><span class="s2">&quot;__main__&quot;</span><span class="s1">:</span>
+<a name="l138"><span class="ln">138  </span></a>    <span class="s1">app = DatingApp ()</span>
+<a name="l139"><span class="ln">139  </span></a>    <span class="s1">app.run ()</span>
+<a name="l140"><span class="ln">140  </span></a>
+<a name="l141"><span class="ln">141  </span></a>    <span class="s5"># Example of using repr() correctly</span>
+<a name="l142"><span class="ln">142  </span></a>    <span class="s1">example_object = </span><span class="s2">&quot;This is an example&quot;</span>
+<a name="l143"><span class="ln">143  </span></a>    <span class="s1">print (repr (example_object))  </span><span class="s5"># This will print the string representation of 'example_object'</span></pre>
+</body>
+</html>
